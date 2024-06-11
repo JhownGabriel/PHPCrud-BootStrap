@@ -14,11 +14,11 @@ require_once 'header.php';
                     $lastname = $_POST['lastname'];
                     $address = $_POST['address'];
                     $contact = $_POST['contact'];
-                    $sql = "UPDATE users SET firstname='{$firstname}',lastname = '{lastname}',
-                        address= '{address}', contact = '{$contact}'
-                        WHERE user_id=" .$_POST['userid'];
+                    $sql = "UPDATE users SET firstname='{$firstname}',lastname = '{$lastname}',address = '{$address}', contact = '{$contact}' WHERE user_id=" .$_POST['userid'];
                     if ($con->query($sql) === TRUE) {
-                        echo "<div class='alert alert-danger'>Error: There was an error while updating user info</div>"; 
+                        echo "<div class='alert alert-success'>Successfully updated user</div>"; 
+                    }else{
+                        echo "<div class='alert alert-danger'>Error: There was an error while updating user info";
                     }
                 }
             }
@@ -39,20 +39,15 @@ require_once 'header.php';
                                     <input type="hidden" value="<?php echo $row['user_id']; ?>"
                                     name="userid">
                                     <label for="firstname">Firstname</label>
-                                    <input type="text" id="firstname" name="firstname"
-                                value="<?php echo $row['firstname']; ?>" class="form-control"><br>
+                                        <input type="text" id="firstname" name="firstname" value="<?php echo $row['firstname']; ?>" class="form-control"><br>
                                     <label for="lastname">Lastname</label>
-                                    <input type="text" name="lastname" id="lastname"
-                                value="<?php echo $row['lastname']; ?>" class="form-control"><br>
+                                        <input type="text" name="lastname" id="lastname" value="<?php echo $row['lastname']; ?>" class="form-control"><br>
                                     <label for="address">Address</label>
-                                    <textarea rows="4" name="address" class="form-
-                                control"><?php echo $row['address']; ?></textarea><br>
+                                        <textarea rows="4" name="address" class="form-control"><?php echo $row['address']; ?></textarea><br>
                                     <label for="contact">Contact</label>
-                                    <input type="text" name="contact" id="contact"
-                                value="<?php echo $row['contact']; ?>" class="form-control"><br>
+                                        <input type="text" name="contact" id="contact" value="<?php echo $row['contact']; ?>" class="form-control"><br>
                                     <br>
-                                    <input type="submit" name="update" class="btn btn-success"
-                                value="Update">
+                                        <input type="submit" name="update" class="btn btn-success" value="Update">
                             </form>
                     </div>
             </div>
@@ -60,3 +55,5 @@ require_once 'header.php';
 </div>
 <?php
 require_once 'footer.php';
+
+/* Editar os cadastros dos clientes */

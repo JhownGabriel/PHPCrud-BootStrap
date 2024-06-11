@@ -4,7 +4,7 @@ require_once 'connect.php';
 require_once 'header.php';
 ?>
 <div class="container">
-    <?php
+    <?php                       /* analisa se todos os campos estão preenchidos do cadastro */
     if(isset($_POST['addnew'])){
         if ( empty($_POST['firstname']) || empty($_POST['lastname']) ||
     empty($_POST['address']) || empty($_POST['contact'])) {
@@ -45,3 +45,5 @@ require_once 'header.php';
 </div>
 <?php
 require_once 'footer.php';
+
+/* pagina para inserir novos cadastros */

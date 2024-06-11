@@ -3,7 +3,7 @@
 <head>
     <title> CRUD</title>
     <link rel="stylesheet" type="text/css" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> /* link pro bootstrap */
 
     <style type="text/css">
         .box{
@@ -36,3 +36,5 @@
         </nav>
     </div>
 </body>
+
+/* O cabeçario da pagina com bootstrap */
